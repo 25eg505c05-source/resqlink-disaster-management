@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: resqlink-backend
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/resqlink_db}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:dGhpcy1pcy1hLXZlcnktc2VjdXJlLXJlc3FsaW5rLWp3dC1zZWNyZXQta2V5LTIwMjY=}
+    expiration-ms: 86400000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

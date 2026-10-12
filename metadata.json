@@ -1,0 +1,6 @@
+{
+  "name": "ResQLink: Disaster Response & Relief Resource Management",
+  "description": "Real-time disaster response operations center for relief supply chain tracking, volunteer mobilization, emergency triage, and Spring Boot REST architecture integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
